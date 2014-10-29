@@ -144,5 +144,15 @@ actually it's as simple as
 
 or just the version tag name in place of --tags
 
----
+and one last thing! I overthough things with version names in last weeks HW, git is pretty clean about it so I can get away with v0.1 to v12.100 and so on
 
+---
+dude, I fixed it! before I went to bed too!
+
+I reveresed the order, and changed the conditional to both check to see if the answer is not "0" when the .to_i = 0
+
+and I had to gets.chop after all, so I added .chomp to the menu too
+
+man, I am so proud of figuring it out
+
+fixed some spacing stuff in the menu, too. But that's just wasting time...

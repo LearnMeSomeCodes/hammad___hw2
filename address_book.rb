@@ -17,7 +17,7 @@ end
 ###
 def run_menu()
   menu = [
-    "\n---MENU---",
+    "\n--- MENU ---",
     "1. Create new entry",
     "2. View existing entry",
     "3. Delete existing entry",
@@ -25,8 +25,8 @@ def run_menu()
   ]
 
   puts menu
-  print "Please enter the number for your selection: "
-  gets # don't need .chomp/#CHOMP, as it were
+  print "\nPlease enter the number for your selection: "
+  gets.chomp # don't need .chomp/#CHOMP, as it were
 
 end
 
@@ -36,15 +36,15 @@ def create_entry(a_book)
 
   ### take input 
   ###
-  puts "Enter First Name"
+  puts "> Enter First Name"
   f =gets.chomp
 
-  puts "Enter Last Name"
+  puts "> Enter Last Name"
   l = gets.chomp
-  puts "Enter Phone Number"
+  puts "> Enter Phone Number"
   p = gets.chomp
 
-  puts "Enter Email"
+  puts "> Enter Email"
   e = gets.chomp
   
   ### make new address entry
@@ -59,12 +59,12 @@ def view_book(a_book)
   ### interate through all entries and print shortlist
   ###
   a_book.each_with_index do |entry, i|
-    puts "#{i}     #{ entry.last_name }, #{entry.first_name}"
+    puts "#{i}   #{ entry.last_name }, #{entry.first_name}"
   end
 
   ### and one more value at the end to quit out
   ###
-  puts "#{a_book.size}  >  Quit to Menu"
+  puts "#{a_book.size} > Quit to Menu"
 end
 
 ##########
@@ -78,49 +78,48 @@ address_book = [
 ]
 is_running = true
 
-puts "Welcome to your new Address Book\u2122" # (trademark symbol)"
+puts "\nWelcome to your new Address Book\u2122" # (trademark symbol)"
 # woooooah it actually made a comment that it's the trademark symbol, at least I don't think I copied that over
 
 begin 
   m_select = run_menu().to_i # menu_selection is kinda long
 
   if m_select == 1
-    puts "Creating new entry..."
+    puts "\n- Creating New Entry -"
     create_entry(address_book)
 
   elsif m_select == 2
-    puts "Viewing entries..."
+    puts "\n- Viewing Entries -"
     is_selecting = true
     begin
 
       view_book(address_book)
 
       print "\nEnter a number to see the full entry: "
-      entry_select = gets
+      entry_select = gets.chomp
 
-      if entry_select <= address_book.size 
+      if entry_select.to_i == address_book.size
 
-        # view_full_entry(address_book, entry_select)
-        puts "test"
-      elsif entry_select == address_book.size
-        
-        is_selecting == false
+        is_selecting = false
 
+      elsif (entry_select != "0" and entry_select.to_i == 0)
+
+        puts "** Invalid Selection. Returning to Menu **"
+        is_selecting = false 
       else
-        
-        "** Invalid Selection. Returning to Menu **"
-        is_selecting == false  
-
+        puts "test #{entry_select.to_i}\n\n"
       end
+    
+
     end while is_selecting == true
 
   elsif m_select == 3
-    puts "Deleting Entries..."
+    puts "\n- Deleting Entries -"
   elsif m_select == 4
-    puts "Thank you for using Address Book\u2122.\nNow Quitting, ALL data will be lost (until I do the stretch goals)"
+    puts "\nThank you for using Address Book\u2122. \nALL data will be deleted...until I do the stretch goals)\n\n"
     exit 
   else 
-    puts "Invalid menu selection. Please try again :)"
+    puts "\n** Invalid Selection **"
   end
 
 end while is_running == true
