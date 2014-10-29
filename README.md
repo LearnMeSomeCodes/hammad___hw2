@@ -41,7 +41,8 @@ I ran into the whol local variable problem, just put the menu variable in it's m
 
 --
 alrigh, so I'm long overdue for a commit. 
---
+
+---
 running through the options...aaand good!
 
 I might not have mentioned this but I used '''Print''' so it wouldn't add a new line to the selection
@@ -55,5 +56,24 @@ and all this is on http://daringfireball.net/projects/markdown/syntax#precode an
 
 so the loopy loop looks good, now to commit and fill it in. 
 
-#FOOOOCUSSSS#
+**FOOOOCUSSSS**
+
 --
+the hastags are headers, asterisks are better for bold. Well, I think ##this works## but whatever
+
+let's see what to do when the first option is selected: create new entry
+
+So it'd be awesome to make a class to copy for each "person" in the address book
+
+I think I need some coffee...
+
+but before that! I made a method for creating entries, time to commit and test
+
+and just noticing: the coloring for .md in this theme
+
+threee lines are a good divider if there is a whitespace above, actually colors the line a little blue
+
+if there is something above the lines it's orange like a header
+
+---
+
