@@ -134,3 +134,15 @@ well, it's 1:30 now, and I'm taking diminishing returns in the quality of my thi
 
 So, I'll sleep on it and maybe it'll come to me during work
 
+--
+ah, so `git push` doesn't push tags...bugger
+
+something to look into later http://git-scm.com/book/en/v2/Git-Basics-Tagging
+
+actually it's as simple as  
+`git push origin --tags`
+
+or just the version tag name in place of --tags
+
+---
+
