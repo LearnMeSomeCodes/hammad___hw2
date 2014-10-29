@@ -29,7 +29,7 @@ so I made a little method called show_menu, that literally just puts it.
 
 I thought for a moment to just make a variable, but hey refactoring and all it's better to have something like that a method
 
-alright - so it's just giving me a bunch of errors about the local variable. I'll stick to '''puts menu''' for now. Sheesh
+alright - so it's just giving me a bunch of errors about the local variable. I'll stick to `puts menu` for now. Sheesh
 
 BUT I can totally have a method to run at the start of the program and to loop back at the end of the nested actions
 
@@ -41,3 +41,19 @@ I ran into the whol local variable problem, just put the menu variable in it's m
 
 --
 alrigh, so I'm long overdue for a commit. 
+--
+running through the options...aaand good!
+
+I might not have mentioned this but I used '''Print''' so it wouldn't add a new line to the selection
+
+and in markdown, code is in `backticks` not '''single quotes'''
+```
+three backticks are a code block
+normal markdown has it with 4 whitespaces, fyi
+```
+and all this is on http://daringfireball.net/projects/markdown/syntax#precode and the github md page
+
+so the loopy loop looks good, now to commit and fill it in. 
+
+#FOOOOCUSSSS#
+--
