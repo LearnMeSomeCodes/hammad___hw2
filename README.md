@@ -56,7 +56,9 @@ and all this is on http://daringfireball.net/projects/markdown/syntax#precode an
 
 so the loopy loop looks good, now to commit and fill it in. 
 
-##FOOOOCUSSSS##
+##FOOOOCUSSSS## hashtags
+**FOOOOCUUUUSSSS** splats
+
 
 ---
 the hastags are headers, asterisks are better for bold. Well, I think ##this works## but whatever
@@ -98,3 +100,22 @@ So, when I inspect the array the object looks funny, but appears to have everyth
 Time to see if it works when viewing, which is the next function
 
 ---
+
+oooh used the wrong syntax for the Array#Each
+
+the first argument is the ELEMENT, and the second is index  
+lemme give that a spin
+
+almost! it's actually Array#each_with_index
+
+BINGO
+
+adding a 2 more entries, 3 total, for the test address book
+
+oh, and have to have an expanded view for selection. 
+
+Commit first :D
+
+---
+
+

@@ -13,7 +13,7 @@ end
 
 def run_menu()
   menu = [
-    "---MENU---",
+    "\n---MENU---",
     "1. Create new entry",
     "2. View existing entry",
     "3. Delete existing entry",
@@ -22,7 +22,7 @@ def run_menu()
 
   puts menu
   print "Please enter the number for your selection: "
-  gets # don't need .chomp or #CHOMP as it were
+  gets # don't need .chomp/#CHOMP, as it were
 
 end
 
@@ -53,10 +53,22 @@ def create_entry(a_book)
   a_book.push new_entry
 end
 
+def view_book(a_book)
 
+  a_book.each_with_index do |entry, i|
+    puts "#{i}    #{ entry.last_name }, #{entry.first_name}"
+  end
+
+end
 ##########
 
-address_book = []
+# address_book = []
+
+address_book = [
+  Info_Entry.new("Hammad", "Malik", "30145", "asdf@blah.com"),
+  Info_Entry.new("Son", "Goku", "12341230", "oower@saiyan"),
+  Info_Entry.new("Sallie", "Mae", "3qwer4", "asdof@bills")
+]
 is_running = true
 
 puts "Welcome to your new Address Book\u2122" # (trademark symbol)"
@@ -73,6 +85,9 @@ begin
     # puts address_book.inspect
   elsif m_select == 2
     puts "Viewing entries..."
+
+    # puts address_book.inspect
+    view_book(address_book)
 
   elsif m_select == 3
     puts "Deleting Entries..."
