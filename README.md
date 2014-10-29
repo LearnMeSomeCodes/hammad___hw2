@@ -156,3 +156,8 @@ and I had to gets.chop after all, so I added .chomp to the menu too
 man, I am so proud of figuring it out
 
 fixed some spacing stuff in the menu, too. But that's just wasting time...
+
+---
+another day, another function to implement
+
+have to make a method for showing the full contents of an entry

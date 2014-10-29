@@ -55,7 +55,7 @@ def create_entry(a_book)
 
 end
 
-def view_book(a_book)
+def view_shortlist(a_book)
   ### interate through all entries and print shortlist
   ###
   a_book.each_with_index do |entry, i|
@@ -67,6 +67,9 @@ def view_book(a_book)
   puts "#{a_book.size} > Quit to Menu"
 end
 
+def view_entry (a_book, element)
+
+end
 ##########
 
 # address_book = []
@@ -93,13 +96,13 @@ begin
     is_selecting = true
     begin
 
-      view_book(address_book)
+      view_shortlist(address_book)
 
       print "\nEnter a number to see the full entry: "
       entry_select = gets.chomp
 
       if entry_select.to_i == address_book.size
-
+        puts "* Returning to Menu"
         is_selecting = false
 
       elsif (entry_select != "0" and entry_select.to_i == 0)
