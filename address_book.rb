@@ -1,5 +1,14 @@
-Class Info_Entry
-  attr_accessor :first_name :last_name :phone_num :email
+class Info_Entry
+
+  attr_accessor :first_name, :last_name, :phone_num, :email
+
+  def initialize(first_name, last_name, phone_num, email)
+    @first_name = first_name
+    @last_name  = last_name
+    @phone_num = phone_num
+    @email = email
+  end
+
 end
 
 def run_menu()
@@ -20,19 +29,26 @@ end
 
 
 def create_entry(a_book)
-  new_entry = Info_Entry.new()
-
-  puts "Enter Last Name"
-  gets new_entry.last_name
 
   puts "Enter First Name"
-  gets new_entry.first_name
+  f =gets.chomp
+
+  puts "Enter Last Name"
+  l = gets.chomp
   
   puts "Enter Phone Number"
-  gets new_entry.phone_num
+  p = gets.chomp
 
   puts "Enter Email"
-  gets new_entry.email
+  e = gets.chomp
+
+  new_entry = Info_Entry.new(f, l, p, e)
+
+  # Testing
+  # puts new_entry.first_name
+  # puts new_entry.last_name
+  # puts new_entry.phone_num
+  # puts new_entry.email
 
   a_book.push new_entry
 end
@@ -53,8 +69,8 @@ begin
     puts "Creating new entry..."
 
     create_entry(address_book)
-    puts address_book
 
+    # puts address_book.inspect
   elsif m_select == 2
     puts "Viewing entries..."
 

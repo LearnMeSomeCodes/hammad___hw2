@@ -24,7 +24,7 @@ Bully for me, I got the menu.
 
 Forgot that the puts array.inspect actually shows it in the brackets, and normally it prints it like I want with each element to a line. Horraaaay for the little things
 
---
+---
 so I made a little method called show_menu, that literally just puts it.
 
 I thought for a moment to just make a variable, but hey refactoring and all it's better to have something like that a method
@@ -56,9 +56,9 @@ and all this is on http://daringfireball.net/projects/markdown/syntax#precode an
 
 so the loopy loop looks good, now to commit and fill it in. 
 
-**FOOOOCUSSSS**
+##FOOOOCUSSSS##
 
---
+---
 the hastags are headers, asterisks are better for bold. Well, I think ##this works## but whatever
 
 let's see what to do when the first option is selected: create new entry
@@ -76,4 +76,25 @@ threee lines are a good divider if there is a whitespace above, actually colors 
 if there is something above the lines it's orange like a header
 
 ---
+now that I have the header right, let's see if the pound sign makes a header or bold text. the splash operator is bold fo' sho'
 
+and yes, the three lines are thicker and two are thin
+
+--
+onwards: testing
+
+hah, error on line two.
+
+need commas between the symbol arguments
+
+aaand another error: maybe adding an initializer will fix it
+
+HAH don't need the initializer, here. and it's giving me an error
+
+but I did end up using it
+
+So, when I inspect the array the object looks funny, but appears to have everything. So I think that's it!! 
+
+Time to see if it works when viewing, which is the next function
+
+---
