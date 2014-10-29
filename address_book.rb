@@ -1,3 +1,5 @@
+###class for all entries in AddressBook(array)
+###
 class Info_Entry
 
   attr_accessor :first_name, :last_name, :phone_num, :email
@@ -11,6 +13,8 @@ class Info_Entry
 
 end
 
+### Methods
+###
 def run_menu()
   menu = [
     "\n---MENU---",
@@ -30,36 +34,39 @@ end
 
 def create_entry(a_book)
 
+  ### take input 
+  ###
   puts "Enter First Name"
   f =gets.chomp
 
   puts "Enter Last Name"
   l = gets.chomp
-  
   puts "Enter Phone Number"
   p = gets.chomp
 
   puts "Enter Email"
   e = gets.chomp
-
+  
+  ### make new address entry
+  ###
   new_entry = Info_Entry.new(f, l, p, e)
 
-  # Testing
-  # puts new_entry.first_name
-  # puts new_entry.last_name
-  # puts new_entry.phone_num
-  # puts new_entry.email
-
   a_book.push new_entry
+
 end
 
 def view_book(a_book)
-
+  ### interate through all entries and print shortlist
+  ###
   a_book.each_with_index do |entry, i|
-    puts "#{i}    #{ entry.last_name }, #{entry.first_name}"
+    puts "#{i}     #{ entry.last_name }, #{entry.first_name}"
   end
 
+  ### and one more value at the end to quit out
+  ###
+  puts "#{a_book.size}  >  Quit to Menu"
 end
+
 ##########
 
 # address_book = []
@@ -79,15 +86,33 @@ begin
 
   if m_select == 1
     puts "Creating new entry..."
-
     create_entry(address_book)
 
-    # puts address_book.inspect
   elsif m_select == 2
     puts "Viewing entries..."
+    is_selecting = true
+    begin
 
-    # puts address_book.inspect
-    view_book(address_book)
+      view_book(address_book)
+
+      print "\nEnter a number to see the full entry: "
+      entry_select = gets
+
+      if entry_select.abs <= address_book.size 
+
+        # view_full_entry(address_book, entry_select)
+        puts "test"
+      elsif entry_select == address_book.size
+        
+        is_selecting == false
+
+      else
+        
+        "** Invalid Selection. Returning to Menu **"
+        is_selecting == false  
+
+      end
+    end while is_selecting == true
 
   elsif m_select == 3
     puts "Deleting Entries..."

@@ -117,5 +117,14 @@ oh, and have to have an expanded view for selection.
 Commit first :D
 
 ---
+adding mad comments, to make more readable. Or at least I hope that's what it does
+
+oh, so running some stuff, and the loop is going and goin
+
+Found out why: .to_i actually converts non-integers to 0 http://apidock.com/ruby/String/to_i
+
+so, have to find a way to both accept the index 0, and check for invalid entries.
+
+---
 
 
