@@ -23,3 +23,21 @@ I finally got around to changing the sublime setting for making tabs use spaces.
 Bully for me, I got the menu.
 
 Forgot that the puts array.inspect actually shows it in the brackets, and normally it prints it like I want with each element to a line. Horraaaay for the little things
+
+--
+so I made a little method called show_menu, that literally just puts it.
+
+I thought for a moment to just make a variable, but hey refactoring and all it's better to have something like that a method
+
+alright - so it's just giving me a bunch of errors about the local variable. I'll stick to '''puts menu''' for now. Sheesh
+
+BUT I can totally have a method to run at the start of the program and to loop back at the end of the nested actions
+
+got fancy and looked up how to add a trademark symbol character http://archive.railsforum.com/viewtopic.php?id=28925
+
+Dunno why it works, so I'll ponder it later. If I had to guess I'd say "unicode," and if I was wrong I'd calmly add "I meant UTF, duh"
+
+I ran into the whol local variable problem, just put the menu variable in it's method 
+
+--
+alrigh, so I'm long overdue for a commit. 
