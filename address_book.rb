@@ -98,7 +98,7 @@ begin
       print "\nEnter a number to see the full entry: "
       entry_select = gets
 
-      if entry_select.abs <= address_book.size 
+      if entry_select <= address_book.size 
 
         # view_full_entry(address_book, entry_select)
         puts "test"

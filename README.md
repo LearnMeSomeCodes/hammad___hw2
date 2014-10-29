@@ -126,5 +126,11 @@ Found out why: .to_i actually converts non-integers to 0 http://apidock.com/ruby
 so, have to find a way to both accept the index 0, and check for invalid entries.
 
 ---
+v0.1 end
 
+#v0.2#
+
+well, it's 1:30 now, and I'm taking diminishing returns in the quality of my thinking process.
+
+So, I'll sleep on it and maybe it'll come to me during work
 
