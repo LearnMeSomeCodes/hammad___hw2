@@ -23,9 +23,11 @@ def view_shortlist(a_book)
 
   ### and one more value at the end to quit out
   puts "#{a_book.size} > Quit to Menu"
+
 end
 
 def view_entry(addr_entry)
+  puts
   puts "--- --- --- --- ---"
   puts "First Name:    #{addr_entry.first_name}"
   puts "Last Name:     #{addr_entry.last_name}"

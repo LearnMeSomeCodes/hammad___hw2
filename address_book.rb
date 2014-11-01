@@ -41,8 +41,9 @@ begin
 
       view_shortlist(address_book)
 
-      print "\nEnter a number to see the full entry: "
+      print "Enter the number for your selection: "
       entry_select = gets.chomp
+      puts
 
       if entry_select.to_i == address_book.size
         puts "* Returning to Menu *"
@@ -62,9 +63,39 @@ begin
     end while is_selecting == true
 
   elsif m_select == 3
-    puts "\n- Deleting Entries -"
+    puts
+    puts "- Deleting Entries -"
+    is_selecting = true
+
+    begin
+      view_shortlist(address_book)
+
+      print "Enter the number for your selection: "
+      entry_select = gets.chomp
+      puts
+
+      if entry_select.to_i == address_book.size
+        puts "* Returning to Menu *"
+        is_selecting = false
+
+      elsif (entry_select != "0" and entry_select.to_i == 0)
+
+        puts "** Invalid Selection. Returning to Menu **"
+        is_selecting = false 
+
+      else
+
+        puts "Now Deleting \"#{address_book[entry_select.to_i].first_name}\" \"#{address_book[entry_select.to_i].last_name}\"    "
+        address_book.delete_at entry_select.to_i 
+
+      end
+
+    end while is_selecting == true
+
   elsif m_select == 4
-    puts "\nThank you for using Address Book\u2122. \nALL data will be deleted...until I do the stretch goals)\n\n"
+    puts
+    puts "Thank you for using Address Book\u2122. \nALL data will be deleted...until I do the stretch goals :)"
+    puts
     exit 
   else 
     puts "\n** Invalid Selection **"
