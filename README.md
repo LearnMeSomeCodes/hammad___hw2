@@ -189,4 +189,17 @@ ALMOST. There is currently a bug where an integer outside of the range gives an 
 
 ---
 
+to delete, don't pop, use Array.delete_at index
+
+---
+now to fix the bug, which is easier if I make a few more methods
+
+actually, let me make the v1.0 first
+
+*now tagging v1.0
+
+---
+v1.0
+---
+It appears the last commit is the "current one" or at least that hat it looks like
 
