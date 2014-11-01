@@ -181,5 +181,12 @@ bah humb whatever, time to encapsulate :D
 so far, so good. commiting before moving stuff around
 
 ---
+have to define defaults for initialize method, or else ALWAYS need a method
+
+alright, so with some finagling, which I just learned has adestructive/underhanded implication, I got the view entry up and running. 
+
+ALMOST. There is currently a bug where an integer outside of the range gives an error, but strings give the apporpriate message and exit to menu. Fix later, only one more small function to go
+
+---
 
 
