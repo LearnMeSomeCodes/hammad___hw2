@@ -1,78 +1,80 @@
-###class for all entries in AddressBook(array)
-###
-class Info_Entry
+require_relative 'library'
 
-  attr_accessor :first_name, :last_name, :phone_num, :email
+# ##class for all entries in AddressBook(array)
+# ##
+# class Info_Entry
 
-  def initialize(first_name, last_name, phone_num, email)
-    @first_name = first_name
-    @last_name  = last_name
-    @phone_num = phone_num
-    @email = email
-  end
+#   attr_accessor :first_name, :last_name, :phone_num, :email
 
-end
+#   def initialize(first_name, last_name, phone_num, email)
+#     @first_name = first_name
+#     @last_name  = last_name
+#     @phone_num = phone_num
+#     @email = email
+#   end
 
-### Methods
-###
-def run_menu()
-  menu = [
-    "\n--- MENU ---",
-    "1. Create new entry",
-    "2. View existing entry",
-    "3. Delete existing entry",
-    "4. Quit Application"
-  ]
+# end
 
-  puts menu
-  print "\nPlease enter the number for your selection: "
-  gets.chomp # don't need .chomp/#CHOMP, as it were
+# ## Methods
+# ##
+# def run_menu()
+#   menu = [
+#     "\n--- MENU ---",
+#     "1. Create new entry",
+#     "2. View existing entry",
+#     "3. Delete existing entry",
+#     "4. Quit Application"
+#   ]
 
-end
+#   puts menu
+#   print "\nPlease enter the number for your selection: "
+#   gets.chomp # don't need .chomp/#CHOMP, as it were
+
+# end
 
 
 
-def create_entry(a_book)
+# def create_entry(a_book)
 
-  ### take input 
-  ###
-  puts "> Enter First Name"
-  f =gets.chomp
+#   ### take input 
+#   ###
+#   puts "> Enter First Name"
+#   f =gets.chomp
 
-  puts "> Enter Last Name"
-  l = gets.chomp
-  puts "> Enter Phone Number"
-  p = gets.chomp
+#   puts "> Enter Last Name"
+#   l = gets.chomp
+#   puts "> Enter Phone Number"
+#   p = gets.chomp
 
-  puts "> Enter Email"
-  e = gets.chomp
+#   puts "> Enter Email"
+#   e = gets.chomp
   
-  ### make new address entry
-  ###
-  new_entry = Info_Entry.new(f, l, p, e)
+#   ### make new address entry
+#   ###
+#   new_entry = Info_Entry.new(f, l, p, e)
 
-  a_book.push new_entry
+#   a_book.push new_entry
 
-end
+# end
 
-def view_shortlist(a_book)
-  ### interate through all entries and print shortlist
-  ###
-  a_book.each_with_index do |entry, i|
-    puts "#{i}   #{ entry.last_name }, #{entry.first_name}"
-  end
+# def view_shortlist(a_book)
+#   ### interate through all entries and print shortlist
+#   ###
+#   a_book.each_with_index do |entry, i|
+#     puts "#{i}   #{ entry.last_name }, #{entry.first_name}"
+#   end
 
-  ### and one more value at the end to quit out
-  ###
-  puts "#{a_book.size} > Quit to Menu"
-end
+#   ### and one more value at the end to quit out
+#   ###
+#   puts "#{a_book.size} > Quit to Menu"
+# end
 
-def view_entry (a_book, element)
+# def view_entry (a_book, element)
 
-end
-##########
+# end
+#########
 
-# address_book = []
+address_book = []
 
 address_book = [
   Info_Entry.new("Hammad", "Malik", "30145", "asdf@blah.com"),
@@ -102,7 +104,7 @@ begin
       entry_select = gets.chomp
 
       if entry_select.to_i == address_book.size
-        puts "* Returning to Menu"
+        puts "* Returning to Menu *"
         is_selecting = false
 
       elsif (entry_select != "0" and entry_select.to_i == 0)

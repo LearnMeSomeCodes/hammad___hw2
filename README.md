@@ -168,4 +168,18 @@ Alright, I'm going to commit this as v0.2 and then add encapsulation.
 
 In class I realized I can put methods inside the object, cleaner but I have to be careful about using self.dot vs the arugment
 
-* Finished v0.2 *
+*Finished v0.2*
+
+---
+v0.3
+--
+
+can't tell wheter tag does the last previous commit, or the next commit. 
+
+bah humb whatever, time to encapsulate :D
+
+so far, so good. commiting before moving stuff around
+
+---
+
+
