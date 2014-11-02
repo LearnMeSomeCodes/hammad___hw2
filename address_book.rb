@@ -2,6 +2,7 @@ require_relative 'library'
 
 address_book = []
 
+### Test code, I assume?
 address_book = [
   Info_Entry.new("Hammad", "Malik", "30145", "asdf@blah.com"),
   Info_Entry.new("Son", "Goku", "12341230", "oower@saiyan"),
@@ -49,6 +50,10 @@ begin
         puts "* Returning to Menu *"
         is_selecting = false
 
+      ### TODO: I don't think this condition will ever evaluate
+      ###       to something truthy.  Were you intending to
+      ###       check if entry_select was in the range from
+      ###       0 to address_book.size - 1 ?
       elsif (entry_select != "0" and entry_select.to_i == 0)
 
         puts "** Invalid Selection. Returning to Menu **"

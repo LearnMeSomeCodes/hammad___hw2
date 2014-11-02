@@ -21,6 +21,8 @@ def view_shortlist(a_book)
     puts "#{i}   #{ entry.last_name }, #{entry.first_name}"
   end
 
+  ##### Nice feature add!  Definitely useful to allow
+  ##### users to exit the submenu early.
   ### and one more value at the end to quit out
   puts "#{a_book.size} > Quit to Menu"
 

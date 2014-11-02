@@ -9,5 +9,13 @@ class Info_Entry
     @email = email
   end
   
+
+  ### TODO: Since you're using Classes instead of Hashes, you
+  ###       can add some instance methods to make the rest of
+  ###       your code easier, such as:
+  ###
+  ###         * full_name()  -->  "Bob Dole"
+  ###         * last_first() -->  "Dole, Bob"
+
 end
 
